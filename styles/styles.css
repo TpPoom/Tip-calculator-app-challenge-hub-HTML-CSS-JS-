@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --First-Dark-cyan: hsl(186, 14%, 43%);
+    --Second-Dark-cyan: hsl(184, 14%, 56%);
+    --First-Light-cyan: hsl(185, 41%, 84%);
+    --Second-Light-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
+}
+
+body {
+    background-color: var(--First-Light-cyan);
+}
+
+.heading {
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translate(-50%, -82%);
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 0.5em;
+    color: var(--Very-dark-cyan);
+}
+
+.container {
+    background-color: var(--White);
+    position: absolute;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -46%);
+    border-radius: 1rem;
+    padding: 1.8rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 1.8rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 1rem;
+}
+
+label {
+    color: var(--First-Dark-cyan);
+}
+
+.billC, .selectTipC, .peopleC {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.billC input[type="number"], .peopleC input[type="number"]{
+    font-size: 24px;
+    text-align: end;
+    background-color: var(--Second-Light-cyan);
+    border: 2px solid hsla(172, 67%, 45%, 0);
+    border-radius: 0.3rem;
+    padding: 0.1em 0.7em;
+    outline: none;
+}
+
+.billC input[type="number"]::placeholder, .peopleC input[type="number"]::placeholder {
+    color: hsla(183, 100%, 15%, 0.5);
+  }
+
+.billC input[type="number"] {
+    background-image: url('../images/icon-dollar.svg');
+    background-position: 0.75em 50%;
+    background-repeat: no-repeat;
+}
+
+input[type="number"]:focus {
+    border: 2px solid hsla(172, 67%, 45%, 1);
+}
+
+.selectTipCustomC-active {
+    border: 2px solid hsla(172, 67%, 45%, 1) !important;
+}
+
+.errorInput-active {
+    border: 2px solid #F44336 !important;
+}
+
+.billErrorC {
+    visibility: hidden;
+}
+
+.billErrorC-active {
+    visibility: visible;
+    margin-left: 14.1rem;
+    color: #F44336;
+}
+
+.peopleErrorC {
+    visibility: hidden;
+}
+
+.peopleErrorC-active {
+    visibility: visible;
+    margin-left: 6.75rem;
+    color: #F44336;
+}
+
+.selectTipAllBtnC {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto auto;
+}
+
+.selectTipBtnC {
+    color: var(--White);
+    font-size: 24px;
+    background-color: var(--Very-dark-cyan);
+    border: none;
+    padding: 0.2em 1.5em;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.selectTipBtnC:hover {
+    background-color: hsla(172, 67%, 45%, 0.4);
+    color: var(--Very-dark-cyan);
+}
+
+.selectTipBtnC-active {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.selectTipCustomC {
+    font-size: 24px;
+    width: 116.08px;
+    text-align: right;
+    background-color: var(--Second-Light-cyan);
+    border: 2px solid hsla(172, 67%, 45%, 0);
+    border-radius: 0.3rem;
+    padding: 0.1em 0.5em;
+    outline: none;
+}
+
+.selectTipCustomC::placeholder {
+    color: var(--Very-dark-cyan);
+    opacity: 0.75;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.peopleC input[type="number"] {
+    background-image: url('../images/icon-person.svg');
+    background-position: 0.75em 50%;
+    background-repeat: no-repeat;
+}
+
+.result {
+    background-color: var(--Very-dark-cyan);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    width: 420px;
+}
+
+.result h4 {
+    color: var(--White);
+    letter-spacing: 0.05em;
+}
+
+.result p {
+    color: var(--Second-Dark-cyan);
+    font-size: 14px;
+}
+
+.tipAmountC {
+    margin-bottom: 1em;
+}
+
+.totalC {
+    margin-bottom: 7em;
+}
+
+.text {
+    display: inline-block;
+    padding: 1em 0;
+}
+
+.tipAmountNumC, .totalNumC {
+    color: var(--Strong-cyan);
+    font-size: 50px;
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.resetBtn {
+    background-color: var(--Strong-cyan);
+    opacity: 0.2;
+    font-size: 20px;
+    border: 0;
+    border-radius: 0.3rem;
+    width: 100%;
+    padding: 0.6em 0;
+}
+
+.resetBtn-active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.resetBtn-active:hover {
+    background-color: var(--First-Light-cyan);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

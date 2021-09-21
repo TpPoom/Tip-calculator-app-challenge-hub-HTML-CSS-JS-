@@ -1,0 +1,56 @@
+@media only screen and (max-width: 375px) {
+    .heading {
+        position: static;
+        transform: translate(0, 0);
+        align-self: center;
+        padding: 2em;
+    }
+
+    .container {
+        position: static;
+        grid-template-columns: auto;
+        grid-row-gap: 1.8rem;
+        transform: translate(0, 0);
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .input {
+        padding: 0;
+    }
+
+    .billC input[type="number"], .peopleC input[type="number"]{
+        width: 100%;
+    }
+
+    .selectTipAllBtnC {
+        grid-template-columns: auto auto;
+    }
+
+    .result {
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    .tipAmountNumC, .totalNumC {
+        font-size: 30px;
+        padding: 0.5em 0;
+    }
+
+    .tipAmountC {
+        margin-bottom: 0;
+    }
+
+    .totalC {
+        margin-bottom: 1.4em;
+    }
+
+    .billErrorC-active {
+        margin-left: 9.4rem;
+    }
+
+    .peopleErrorC-active {
+        margin-left: 2rem;
+    }
+}
